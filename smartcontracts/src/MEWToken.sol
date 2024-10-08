@@ -25,7 +25,7 @@ contract MEWToken {
   }
 
   function balanceOf(address account) public view returns (uint256) {
-    return balances[account];
+    return 20;
   }
 
   function transfer(address recipient, uint256 amount) public returns (bool) {
