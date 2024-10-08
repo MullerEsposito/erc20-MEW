@@ -1,0 +1,7 @@
+FROM ghcr.io/foundry-rs/foundry:nightly-fa0e0c2ca3ae75895dd19173a02faf88509c0608@sha256:f139373ccc8a52047e14b3a4cd37b97812707bfb36db81cf3872b6cc75fc19fb
+
+WORKDIR /develop
+COPY . .
+
+RUN forge b --skip test
+CMD ["forge script script/deploy.local.s.sol:Local -f http://anvil:8545 --broadcast"]
